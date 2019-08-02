@@ -2609,7 +2609,7 @@ input, select, textarea {
 
 			.mini-posts article .image img {
 				display: block;
-				width: 100%;
+				width: 50%;
 			}
 
 		.mini-posts article:first-child {
@@ -2864,7 +2864,7 @@ input, select, textarea {
 
 				.posts article .image img {
 					display: block;
-					width: 100%;
+					width: 50%;
 				}
 
 		@media screen and (min-width: 1681px) {
