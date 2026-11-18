@@ -75,6 +75,7 @@
 				border-bottom: 2px solid #e2e1db;
 			}
 	
+		#banner { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -427,7 +428,7 @@ function renderJournals(papers) {
         ? `<div class="dimensions-wrap">
              <span class="__dimensions_badge_embed__"
                data-doi="${p.doi}"
-               data-style="small_rectangle"
+               data-style="logo_and_count"
                data-hide-zero-citations="true">
              </span>
            </div>`
@@ -452,6 +453,14 @@ function renderJournals(papers) {
 
 function init() {
   renderJournals(PAPERS);
+  // 等 Dimensions script 載入後重新掃描動態插入的 badge
+  if (window.__dimensions_embed) {
+    window.__dimensions_embed.addBadges();
+  } else {
+    window.addEventListener('load', function() {
+      if (window.__dimensions_embed) window.__dimensions_embed.addBadges();
+    });
+  }
 }
 
 init();
