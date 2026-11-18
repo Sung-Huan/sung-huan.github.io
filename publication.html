@@ -451,6 +451,16 @@ function renderJournals(papers, citations) {
            </div>`
         : '';
 
+	  const dimensionsBadge = p.doi
+        ? `<div class="altmetric-wrap">
+             <span class="__dimensions_badge_embed__"
+               data-doi="${p.doi}"
+               data-style="small_rectangle"
+               data-hide-zero-citations="true">
+             </span>
+           </div>`
+        : '';
+
       card.innerHTML = `
         <div class="pub-title">${p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title}</div>
         <div class="pub-authors">${p.authors}</div>
