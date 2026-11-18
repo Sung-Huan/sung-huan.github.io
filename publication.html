@@ -47,7 +47,6 @@
 			.badge-q1   { background: #eaf3de; color: #3b6d11; }
 			.badge-q2   { background: #faeeda; color: #633806; }
 			.badge-q3   { background: #fcebeb; color: #791f1f; }
-			.badge-cite { background: #f1efe8; color: #444441; }
 			.badge-note { background: #faeeda; color: #633806; }
 			.badge-loading { opacity: 0.45; }
 			.dimensions-wrap {
@@ -75,7 +74,7 @@
 				padding-bottom: 0.4rem;
 				border-bottom: 2px solid #e2e1db;
 			}
-			.update-note { font-size: 0.75rem; color: #9c9a92; margin-top: 1.5rem; text-align: right; }
+	
 		</style>
 	</head>
 	<body class="is-preload">
@@ -105,7 +104,6 @@
 					<section>
 						<div class="section-title">Journal Articles</div>
 						<div id="journal-list"></div>
-						<p class="update-note" id="update-note"></p>
 
 						<div class="section-title">Conference Papers</div>
 						<div class="pub-card">
@@ -395,15 +393,7 @@ const PAPERS = [
   }
 ];
 
-async function fetchCitations(doi) {
-  if (!doi) return null;
-  try {
-    const res = await fetch(`https://api.openalex.org/works/https://doi.org/${doi}`);
-    if (!res.ok) return null;
-    const data = await res.json();
-    return data.cited_by_count ?? null;
-  } catch { return null; }
-}
+
 
 function rankingClass(r) {
   if (!r) return '';
@@ -413,11 +403,11 @@ function rankingClass(r) {
   return 'badge-q3';
 }
 
-function renderJournals(papers, citations) {
+function renderJournals(papers) {
   const byYear = {};
   papers.forEach((p, i) => {
     if (!byYear[p.year]) byYear[p.year] = [];
-    byYear[p.year].push({ ...p, citations: citations[i] });
+    byYear[p.year].push({ ...p });
   });
 
   const years = Object.keys(byYear).sort((a, b) => b - a);
@@ -432,10 +422,6 @@ function renderJournals(papers, citations) {
     byYear[year].forEach(p => {
       const card = document.createElement('div');
       card.className = 'pub-card';
-
-      const citesBadge = p.citations !== null
-        ? `<span class="badge badge-cite">📖 ${p.citations} citations</span>`
-        : (p.doi ? `<span class="badge badge-cite badge-loading">📖 fetching…</span>` : '');
 
       const dimensionsBadge = p.doi
         ? `<div class="dimensions-wrap">
@@ -454,7 +440,6 @@ function renderJournals(papers, citations) {
         <div class="pub-metrics">
           ${p.if      ? `<span class="badge badge-if">IF ${p.if}</span>` : ''}
           ${p.ranking ? `<span class="badge ${rankingClass(p.ranking)}">${p.ranking}</span>` : ''}
-          ${citesBadge}
           ${p.note    ? `<span class="badge badge-note">★ ${p.note}</span>` : ''}
           ${dimensionsBadge}
         </div>`;
@@ -463,14 +448,10 @@ function renderJournals(papers, citations) {
     container.appendChild(group);
   });
 
-  document.getElementById('update-note').textContent =
-    `Citation counts fetched from OpenAlex on ${new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })}`;
 }
 
-async function init() {
-  renderJournals(PAPERS, PAPERS.map(() => null));
-  const citations = await Promise.all(PAPERS.map(p => fetchCitations(p.doi)));
-  renderJournals(PAPERS, citations);
+function init() {
+  renderJournals(PAPERS);
 }
 
 init();
