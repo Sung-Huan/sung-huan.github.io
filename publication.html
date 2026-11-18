@@ -10,130 +10,477 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+		<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<style>
+			.pub-card {
+				background: #f8f8f6;
+				border: 1px solid #e2e1db;
+				border-radius: 10px;
+				padding: 1.1rem 1.4rem;
+				margin-bottom: 1rem;
+				transition: border-color 0.15s;
+			}
+			.pub-card:hover { border-color: #185fa5; }
+			.pub-title { font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; line-height: 1.4; }
+			.pub-title a { color: #185fa5; text-decoration: none; }
+			.pub-title a:hover { text-decoration: underline; }
+			.pub-authors { font-size: 0.85rem; color: #5f5e5a; margin-bottom: 0.25rem; }
+			.pub-journal { font-size: 0.85rem; color: #5f5e5a; font-style: italic; margin-bottom: 0.6rem; }
+			.pub-metrics {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 0.5rem;
+			}
+			.badge {
+				display: inline-flex;
+				align-items: center;
+				font-size: 0.75rem;
+				font-weight: 500;
+				padding: 0.18rem 0.55rem;
+				border-radius: 20px;
+				white-space: nowrap;
+			}
+			.badge-if   { background: #e6f1fb; color: #0c447c; }
+			.badge-q1   { background: #eaf3de; color: #3b6d11; }
+			.badge-q2   { background: #faeeda; color: #633806; }
+			.badge-q3   { background: #fcebeb; color: #791f1f; }
+			.badge-cite { background: #f1efe8; color: #444441; }
+			.badge-note { background: #faeeda; color: #633806; }
+			.badge-loading { opacity: 0.45; }
+			.altmetric-wrap {
+				display: flex;
+				align-items: center;
+				gap: 0.3rem;
+				font-size: 0.75rem;
+				color: #5f5e5a;
+			}
+			.year-section { margin-bottom: 2rem; }
+			.year-label {
+				font-size: 0.8rem;
+				font-weight: 600;
+				color: #5f5e5a;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				margin-bottom: 0.75rem;
+				padding-bottom: 0.35rem;
+				border-bottom: 1px solid #e2e1db;
+			}
+			.section-title {
+				font-size: 1.1rem;
+				font-weight: 600;
+				margin: 2rem 0 1rem;
+				padding-bottom: 0.4rem;
+				border-bottom: 2px solid #e2e1db;
+			}
+			.update-note { font-size: 0.75rem; color: #9c9a92; margin-top: 1.5rem; text-align: right; }
+		</style>
 	</head>
 	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+					<header id="header">
+						<a href="index.html" class="logo">Computational System BioMedicine Lab</a>
+						<ul class="icons">
+							<li><a href="https://twitter.com/silasysh" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com/silasyu" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						</ul>
+					</header>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo">Computational System BioMedicine Lab</a>
-									<ul class="icons">
-										<li><a href="https://twitter.com/silasysh" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.facebook.com/silasyu" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									</ul>
-								</header>
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h2>Publications</h2>
-										</header>
-										<li><i class="ai ai-google-scholar"><a href="https://scholar.google.com/citations?user=uhApAXMAAAAJ&hl=en">GoogleScholar</a></i></li>
-										<li><i class="ai ai-researchgate"><a href="https://www.researchgate.net/profile/Sung_Huan_Yu">ResearchGate</a></i></li>
-							                </div>
-                                                                </section>
-							<!-- Content -->
-								<section>
-									<h3>Journal</h3>
-									<p>C.Y. Hsu, H.H. Chen, W.T. Kuo, P.M. Chen, I.H.A. Chen, C.C. Yu, Y.S. Chen, C.L. Chen and <b>S.H. Yu</b>, "<a href="https://www.techscience.com/or/online/detail/28921">Matched Multi-Biospecimen Genomic Profiling in Upper Tract Urothelial Carcinoma: An Exploratory Feasibility Study</a>", <i>Oncology Research</i>, 2026, accepted </p> 
-									<p>C.H. Yuan, P.W. Wu, I.L. Shyu, J. Lin, C.J. Chien, L.H. Hsu, H.Y. Lee and <b>S.H. Yu</b>, "<a href="https://www.sciencedirect.com/science/article/pii/S1871678426001184">SPROTify: A protein-centric machine learning framework for small protein identification with validation in cancer proteomics</a>", <i>New Biotechnology</i>, 2026, 19, 179-192</p> 
-									<p>C.Y. Hsu, C.L. Chen, P.T. Lee and <b>S.H. Yu</b>, “<a href="https://academic.oup.com/eep/article/11/1/dvaf020/8168199">Long-Term Risk of Infectious Disease on Living Kidney Donor: A Nationwide Population Cohort Study</a>” <i>American Journal of Transplantation</i>, 2025, 25 (8), S650 </p> 
-									<p>P.H. Wu, S.C. Chen, C.J. Chien, J. Lin, H.Y. Lee, Y.T. Lin, T.C. Weng, P.C. Hsu, M.T. Wu and <b>S.H. Yu</b>, “<a href="https://academic.oup.com/eep/article/11/1/dvaf020/8168199"> Epigenetic Signatures of Phthalate Exposure and Potential Risks: A DNA Methylation Analysis using Infinium MethylationEPIC BeadChip </a>” <i>Environmental Epigenetics</i>, 2025, 11 (1), dvaf020 (selected as the <a href="http://static.primary.prod.gcms.the-infra.com/static/eep/document/EEPIGE_11_1_Cover%20(Summer).pdf?node=d00564559f796c39113c">cover image</a>) </p>
-									<p>Y.Y. Liu, C.C. Lee, P.H. Li, <b>S.H. Yu</b>, M.C. Hung, H.M. Hsu, C.C. Yang, C.C. Huang, P.Y. Kuo and Y.C. Li, “<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12531294/"> AlphaPPIweb: an integration platform for protein-protein interaction prediction and evaluation </a>” <i>American Journal of Cancer Research</i>, 2025, 15 (9), 3980-3989</p>
-									<p>Y.F. Yang, <b>S.H. Yu</b>, J.B. Liao and Y.H. Lin, “<a href="https://www.medsci.org/v22p0158.htm"> Identification and validation of Novel Estrogen Biosynthesis Biomarkers in Sinonasal Inverted Papilloma </a>” <i>International Journal of Medical Sciences</i>, 2025, 22 (1),158-169</p>
-									<p><b>S.H. Yu</b>, S.C. Chen, P.S. Wu, P.I. Kuo, T.A. Chen, H.Y. Lee and M.H. Lin, “<a href="https://www.sciencedirect.com/science/article/pii/S1535947624000586"> Quantification Quality Control Emerges as A Crucial Factor to Enhance Single Cell Proteomics Data Analysis </a>” <i>Molecular & Cellular Proteomics</i>, 2024, 100768</p>
-									<p>H. Lee*, <b>S.H. Yu*</b>, J.E. Shim and D. Yong, “<a href="https://journals.asm.org/doi/10.1128/msystems.00877-23"> Use of a combined antibacterial synergy approach and the ANNOgesic tool to identify novel targets within the gene networks of multidrug-resistant Klebsiella pneumoniae </a>” <i>mSystems</i>, 2024, e00877-23  <b>(Co-first author)</b></p>
-									<p>P.H. Wu, J. Lin, M.C. Kuo and <b>S.H. Yu</b>, “<a href="https://link.springer.com/article/10.1007/s40620-023-01793-8"> The eQTL analysis to discover unique eGFR-related SNPs for the Taiwanese population </a>” <i>Journal of Nephrology</i>, 2023, 37, 249-252 </p>
-									<p>P.S. Wu, <b>S.H. Yu</b> and M.H. Lin, “<a href="https://www.jstage.jst.go.jp/article/jpdm/5/0/5_2023.0014/_article/-char/en"> Benchmarking dataset for optimizing differential expression analysis in label-free quantitative proteomic analysis </a>” <i>Journal of Proteome Data and Methods</i>, 2023, 5, 14 </p>
-									<p>M.H. Lin, P.S. Wu, T.H. Wong, I.Y. Lin, J. Lin, J. Cox and <b>S.H. Yu</b>, “<a href="https://pubmed.ncbi.nlm.nih.gov/35397162/"> Benchmarking differential expression, imputation and quantification methods for proteomics data </a>” <i>Briefings in Bioinformatics</i>, 2022, 23 (3), bbac138 </p>
-									<p>K. Moon, M. Sim, C.H. Tai, K. Yoo, C. Merzbacher, <b>S.H. Yu</b>, D. Kim, J. Lee, K.U. Förstner, Q. Chen, S. Stibitz, L. Knipling and D. Hinton, “<a href="https://pubmed.ncbi.nlm.nih.gov/34550019/"> Identification of BvgA-Dependent and BvgA-Independent Small RNAs (sRNAs) in Bordetella pertussis Using the Prokaryotic sRNA Prediction Toolkit ANNOgesic</a>” <i>Microbiology Spectrum</i>, 2021, e0004421 </p>
-									<p><b>S.H. Yu</b>, P. Kyriakidou and J. Cox, “<a href="https://pubmed.ncbi.nlm.nih.gov/32892627"> Isobaric matching between runs and novel PSM-level normalization in MaxQuant strongly improve reporter ionbased quantification</a>” <i>Journal of Proteome Research</i>, 2020, 19 (10), 3945-3954</p>
-									<p><b>S.H. Yu</b>,  D. Ferretti, J.P. Schessner, J.D. Rudolph, G.H.H. Borner and J. Cox, “<a href="https://pubmed.ncbi.nlm.nih.gov/32931150"> Expanding the Perseus software for omics data analysis with custom plugins</a>” <i>Current Protocols in Bioinformatics</i>, 2020, 71 (1), e105 </p>
-							        <p><b>S.H. Yu</b>, J. Vogel and K.U. Förstner, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/30169674"> ANNOgesic: A Swiss army knife for the RNA-Seq based annotation of bacterial/archaeal genomes</a>” <i>GigaScience</i>, 2018, 7 (9), giy096 </p>
-								    <p>B. Remes, T. Rische-Grahl, K.M.H. Müller, K.U. Förstner, <b>S.H. Yu</b>, L. Weber, A. Jäger, V. Peuser and G. Klug, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/28507242">An RpoHI-dependent response promotes outgrowth after extended stationary phase in the alphaproteobacterium Rhodobacter sphaeroides</a>” <i>Journal of bacteriology</i>, 2017, 199 (14), e00249-17 </p>
-								    <p>J. Dingemans, P. Monsieurs, <b>S.H. Yu</b>, A. Crabbé, K.U. Förstner, A. Malfroot, P. Cornelis and R. Van Houdt, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/27486191">Effect of shear stress on Pseudomonas aeruginosa isolated from the cystic fibrosis lung</a>” <i>MBio</i>, 2016, 7 (4), e00813-16 </p>
-								    <p>S.W. Yeh, T.T. Huang, J.W. Liu, <b>S.H. Yu</b>, C.H. Shih, J.K. Hwang and J. Echave, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/25121105">Local packing density is the main structural determinant of the rate of protein sequence evolution at site level</a>” <i>BioMed research international</i>, 2014 </p>
-									<p>S.W. Yeh, J.W. Liu, <b>S.H. Yu</b>, C.H. Shih, J.K. Hwang and J. Echave, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/24109601">Site-specific structural constraints on protein sequence evolutionary divergence: local packing density versus solvent exposure</a>” <i>Molecular Biology and Evolution</i>, 2013, 31 (1), 135-139 </p>
-								    <p>S.W. Huang, <b>S.H. Yu</b>, C.H. Shih, H.W. Guan, T.T. Huang and J.K. Hwang, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/21787303">On the relationship between catalytic residues and their protein contact number</a>” <i>Current Protein and Peptide Science</i>, 2011, 12 (6), 574-579 </p>
-									<p>Y.L. Lai, S.C. Yen, <b>S.H. Yu</b> and J.K. Hwang, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/17526524">pKNOT: the protein KNOT web server</a>” <i>Nucleic acids research</i>, 2007, 35, W420-W424 </p>
-									<p>C.H. Shih, S.W. Huang, S.C. Yen, Y.L. Lai, <b>S.H. Yu</b> and J.K. Hwang, “<a href="https://www.ncbi.nlm.nih.gov/pubmed/17436324">A simple way to compute protein dynamics without a mechanical model</a>” <i>PROTEINS: Structure, Function, and Bioinformatics</i>, 2007, 68 (1), 34-38 </p>
-								        <br>
-									<h3>Conference Paper</h3>
-									<p>C.C. Yang, P.H. Wu, <b>S.H. Yu</b>, L.Y. Deng, and H.H.S. Lu, "Building and Improving Epigenetic Clocks Using Random Integrated Subdata Ensemble (RISE)" <i>2026 International Conference on Computational Science and Computational Intelligence (CSCI)</p>
-									    <br>
-									<h3>Book Chapter</h3>
-									<p>C.H. Tai, D. Hinton and <b>S.H. Yu</b>, “<a href="https://link.springer.com/protocol/10.1007/978-1-0716-3565-0_4"> Discovering Novel Bacterial Small RNA by RNA-seq Analysis Toolkit ANNOgesic</a>” <i>Bacterial regulatory RNAs - Methods and Protocols</i>, 2nd Edition, MIMB, volume 2741, 2024, p.p. 35-69, </p>
-								</section>
+					<section id="banner">
+						<div class="content">
+							<header><h2>Publications</h2></header>
+							<ul style="list-style:none; padding:0; display:flex; gap:1rem; flex-wrap:wrap;">
+								<li><i class="ai ai-google-scholar"></i> <a href="https://scholar.google.com/citations?user=uhApAXMAAAAJ&hl=en">Google Scholar</a></li>
+								<li><i class="ai ai-researchgate"></i> <a href="https://www.researchgate.net/profile/Sung_Huan_Yu">ResearchGate</a></li>
+							</ul>
 						</div>
-					</div>
+					</section>
 
-                        <!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
+					<section>
+						<div class="section-title">Journal Articles</div>
+						<div id="journal-list"></div>
+						<p class="update-note" id="update-note"></p>
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<span class="image-wrapper">
-									      <img style="float: rigth; padding: 0px 100px 0px 0px;" src="images/logo.png" alt="" width="100%" />
-                                                                        </span>
-									<header class="major">
-										<h2>Menu</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Homepage</a></li>
-										<li><a href="about.html">PI</a></li>
-										<li><a href="member.html">Members</a></li>
-										<li><a href="research.html">Research</a></li>
-										<li><a href="software.html">Software</a></li>
-										<li><a href="course.html">Courses</a></li>
-										<li><a href="cooperation.html">Cooperators</a></li>
-										<li><a href="photo.html">Photos</a></li>
-										<li><a href="publication.html">Publications</a></li>
-									</ul>
-								</nav>
-								<section>
-									<header class="major">
-										<h2>Get in touch</h2>
-									</header>
-									<p>welcome to contact me for the possibility of collaboration.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">silasysh@g-mail.nsysu.edu.tw</a></li>
-										<li class="icon solid fa-phone">07-5252000 ext. 7254</li>
-										<li class="icon solid fa-home">Institute of Precision Medicine, No.70 Lien-hai Rd., Kaohsiung 80424, Taiwan</li>
-									</ul>
-								</section>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-								</footer>
-
+						<div class="section-title">Conference Papers</div>
+						<div class="pub-card">
+							<div class="pub-title">Building and Improving Epigenetic Clocks Using Random Integrated Subdata Ensemble (RISE)</div>
+							<div class="pub-authors">C.C. Yang, P.H. Wu, <b>S.H. Yu</b>, L.Y. Deng, and H.H.S. Lu</div>
+							<div class="pub-journal">2026 International Conference on Computational Science and Computational Intelligence (CSCI)</div>
 						</div>
-					</div>
 
-                                </div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+						<div class="section-title">Book Chapters</div>
+						<div class="pub-card">
+							<div class="pub-title"><a href="https://link.springer.com/protocol/10.1007/978-1-0716-3565-0_4" target="_blank">Discovering Novel Bacterial Small RNA by RNA-seq Analysis Toolkit ANNOgesic</a></div>
+							<div class="pub-authors">C.H. Tai, D. Hinton and <b>S.H. Yu</b></div>
+							<div class="pub-journal">Bacterial regulatory RNAs - Methods and Protocols, 2nd Edition, MIMB, volume 2741, 2024, pp. 35–69</div>
+						</div>
+					</section>
+
+				</div>
+			</div>
+
+			<div id="sidebar">
+				<div class="inner">
+					<section id="search" class="alt">
+						<form method="post" action="#">
+							<input type="text" name="query" id="query" placeholder="Search" />
+						</form>
+					</section>
+					<nav id="menu">
+						<span class="image-wrapper">
+							<img src="images/logo.png" alt="" style="width:100%; height:auto;" />
+						</span>
+						<header class="major"><h2>Menu</h2></header>
+						<ul>
+							<li><a href="index.html">Homepage</a></li>
+							<li><a href="about.html">PI</a></li>
+							<li><a href="member.html">Members</a></li>
+							<li><a href="research.html">Research</a></li>
+							<li><a href="software.html">Software</a></li>
+							<li><a href="course.html">Courses</a></li>
+							<li><a href="cooperation.html">Cooperators</a></li>
+							<li><a href="photo.html">Photos</a></li>
+							<li><a href="publication.html">Publications</a></li>
+						</ul>
+					</nav>
+					<section>
+						<header class="major"><h2>Get in touch</h2></header>
+						<p>Welcome to contact me for the possibility of collaboration.</p>
+						<ul class="contact">
+							<li class="icon solid fa-envelope"><a href="#">silasysh@g-mail.nsysu.edu.tw</a></li>
+							<li class="icon solid fa-phone">07-5252000 ext. 7254</li>
+							<li class="icon solid fa-home">Institute of Precision Medicine, No.70 Lien-hai Rd., Kaohsiung 80424, Taiwan</li>
+						</ul>
+					</section>
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+<script>
+// ── 論文清單：IF 和 ranking 請每年手動更新 ─────────────────────────
+const PAPERS = [
+  {
+    year: 2026,
+    title: "Matched Multi-Biospecimen Genomic Profiling in Upper Tract Urothelial Carcinoma: An Exploratory Feasibility Study",
+    authors: "C.Y. Hsu, H.H. Chen, W.T. Kuo, P.M. Chen, I.H.A. Chen, C.C. Yu, Y.S. Chen, C.L. Chen and <b>S.H. Yu</b>",
+    journal: "Oncology Research, 2026, accepted",
+    doi: "10.32604/or.2026.091363",
+    if: 4.6, ranking: "Q2",
+    url: "https://www.techscience.com/or/online/detail/28921",
+    note: "Top 10 in BIOCHEMICAL RESEARCH METHODS, 2025"
+  },
+  {
+    year: 2026,
+    title: "SPROTify: A protein-centric machine learning framework for small protein identification with validation in cancer proteomics",
+    authors: "C.H. Yuan, P.W. Wu, I.L. Shyu, J. Lin, C.J. Chien, L.H. Hsu, H.Y. Lee and <b>S.H. Yu</b>",
+    journal: "New Biotechnology, 2026, 19, 179–192",
+    doi: "10.1016/j.nbt.2026.00118",
+    if: 5.6, ranking: Q1,
+    url: "https://www.sciencedirect.com/science/article/pii/S1871678426001184",
+    note: null
+  },
+  {
+    year: 2025,
+    title: "Long-Term Risk of Infectious Disease on Living Kidney Donor: A Nationwide Population Cohort Study",
+    authors: "C.Y. Hsu, C.L. Chen, P.T. Lee and <b>S.H. Yu</b>",
+    journal: "American Journal of Transplantation, 2025, 25 (8), S650",
+    doi: "10.1016/j.ajt.2025.07.1520",
+    if: 8.1, ranking: "Q1",
+    url: "https://academic.oup.com/eep/article/11/1/dvaf020/8168199",
+    note: "Top 7 in SURGERY and Top 2 in TRANSPLANTATION, 2025"
+  },
+  {
+    year: 2025,
+    title: "Epigenetic Signatures of Phthalate Exposure and Potential Risks: A DNA Methylation Analysis using Infinium MethylationEPIC BeadChip",
+    authors: "P.H. Wu, S.C. Chen, C.J. Chien, J. Lin, H.Y. Lee, Y.T. Lin, T.C. Weng, P.C. Hsu, M.T. Wu and <b>S.H. Yu</b>",
+    journal: "Environmental Epigenetics, 2025, 11 (1), dvaf020",
+    doi: "10.1093/eep/dvaf020",
+    if: 4.3, ranking: "Q1",
+    url: "https://academic.oup.com/eep/article/11/1/dvaf020/8168199",
+    note: "Selected as cover image"
+  },
+  {
+    year: 2025,
+    title: "AlphaPPIweb: an integration platform for protein-protein interaction prediction and evaluation",
+    authors: "Y.Y. Liu, C.C. Lee, P.H. Li, <b>S.H. Yu</b>, M.C. Hung, H.M. Hsu, C.C. Yang, C.C. Huang, P.Y. Kuo and Y.C. Li",
+    journal: "American Journal of Cancer Research, 2025, 15 (9), 3980–3989",
+    doi: "10.62347/VSZK9268",
+    if: 3.1, ranking: "Q2",
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12531294/",
+    note: null
+  },
+  {
+    year: 2025,
+    title: "Identification and validation of Novel Estrogen Biosynthesis Biomarkers in Sinonasal Inverted Papilloma",
+    authors: "Y.F. Yang, <b>S.H. Yu</b>, J.B. Liao and Y.H. Lin",
+    journal: "International Journal of Medical Sciences, 2025, 22 (1), 158–169",
+    doi: "10.7150/ijms.101753",
+    if: 3.7, ranking: "Q1",
+    url: "https://www.medsci.org/v22p0158.htm",
+    note: null
+  },
+  {
+    year: 2024,
+    title: "Quantification Quality Control Emerges as A Crucial Factor to Enhance Single Cell Proteomics Data Analysis",
+    authors: "<b>S.H. Yu</b>, S.C. Chen, P.S. Wu, P.I. Kuo, T.A. Chen, H.Y. Lee and M.H. Lin",
+    journal: "Molecular & Cellular Proteomics, 2024, 100768",
+    doi: "10.1016/j.mcpro.2024.100768",
+    if: 6.1, ranking: "Q1",
+    url: "https://www.sciencedirect.com/science/article/pii/S1535947624000586",
+    note: "Top 5 in BIOCHEMICAL RESEARCH METHODS, 2023"
+  },
+  {
+    year: 2024,
+    title: "Use of a combined antibacterial synergy approach and the ANNOgesic tool to identify novel targets within the gene networks of multidrug-resistant Klebsiella pneumoniae",
+    authors: "H. Lee*, <b>S.H. Yu*</b>, J.E. Shim and D. Yong",
+    journal: "mSystems, 2024, e00877-23",
+    doi: "10.1128/msystems.00877-23",
+    if: 6.4, ranking: "Q1",
+    url: "https://journals.asm.org/doi/10.1128/msystems.00877-23",
+    note: "Co-first author"
+  },
+  {
+    year: 2023,
+    title: "The eQTL analysis to discover unique eGFR-related SNPs for the Taiwanese population",
+    authors: "P.H. Wu, J. Lin, M.C. Kuo and <b>S.H. Yu</b>",
+    journal: "Journal of Nephrology, 2023, 37, 249–252",
+    doi: "10.1007/s40620-023-01793-8",
+    if: 3.4, ranking: "Q2",
+    url: "https://link.springer.com/article/10.1007/s40620-023-01793-8",
+    note: null
+  },
+  {
+    year: 2023,
+    title: "Benchmarking dataset for optimizing differential expression analysis in label-free quantitative proteomic analysis",
+    authors: "P.S. Wu, <b>S.H. Yu</b> and M.H. Lin",
+    journal: "Journal of Proteome Data and Methods, 2023, 5, 14",
+    doi: "10.35459/jpdm/2023.0014",
+    if: null, ranking: null,
+    url: "https://www.jstage.jst.go.jp/article/jpdm/5/0/5_2023.0014/_article/-char/en",
+    note: null
+  },
+  {
+    year: 2022,
+    title: "Benchmarking differential expression, imputation and quantification methods for proteomics data",
+    authors: "M.H. Lin, P.S. Wu, T.H. Wong, I.Y. Lin, J. Lin, J. Cox and <b>S.H. Yu</b>",
+    journal: "Briefings in Bioinformatics, 2022, 23 (3), bbac138",
+    doi: "10.1093/bib/bbac138",
+    if: 13.994, ranking: "Q1",
+    url: "https://pubmed.ncbi.nlm.nih.gov/35397162/",
+    note: "Top 1 in MATHEMATICAL & COMPUTATIONAL BIOLOGY and Top 3 in BIOCHEMICAL RESEARCH METHODS, 2021"
+  },
+  {
+    year: 2021,
+    title: "Identification of BvgA-Dependent and BvgA-Independent Small RNAs (sRNAs) in Bordetella pertussis Using the Prokaryotic sRNA Prediction Toolkit ANNOgesic",
+    authors: "K. Moon, M. Sim, C.H. Tai, K. Yoo, C. Merzbacher, <b>S.H. Yu</b>, D. Kim, J. Lee, K.U. Förstner, Q. Chen, S. Stibitz, L. Knipling and D. Hinton",
+    journal: "Microbiology Spectrum, 2021, e0004421",
+    doi: "10.1128/Spectrum.00044-21",
+    if: 9.047, ranking: "Q1",
+    url: "https://pubmed.ncbi.nlm.nih.gov/34550019/",
+    note: null
+  },
+  {
+    year: 2020,
+    title: "Isobaric matching between runs and novel PSM-level normalization in MaxQuant strongly improve reporter ion-based quantification",
+    authors: "<b>S.H. Yu</b>, P. Kyriakidou and J. Cox",
+    journal: "Journal of Proteome Research, 2020, 19 (10), 3945–3954",
+    doi: "10.1021/acs.jproteome.0c00209",
+    if: 4.466, ranking: "Q1",
+    url: "https://pubmed.ncbi.nlm.nih.gov/32892627",
+    note: null
+  },
+  {
+    year: 2020,
+    title: "Expanding the Perseus software for omics data analysis with custom plugins",
+    authors: "<b>S.H. Yu</b>, D. Ferretti, J.P. Schessner, J.D. Rudolph, G.H.H. Borner and J. Cox",
+    journal: "Current Protocols in Bioinformatics, 2020, 71 (1), e105",
+    doi: "10.1002/cpbi.105",
+    if: null, ranking: null,
+    url: "https://pubmed.ncbi.nlm.nih.gov/32931150",
+    note: null
+  },
+  {
+    year: 2018,
+    title: "ANNOgesic: A Swiss army knife for the RNA-Seq based annotation of bacterial/archaeal genomes",
+    authors: "<b>S.H. Yu</b>, J. Vogel and K.U. Förstner",
+    journal: "GigaScience, 2018, 7 (9), giy096",
+    doi: "10.1093/gigascience/giy096",
+    if: 11.8, ranking: "Q1",
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/30169674",
+    note: null
+  },
+  {
+    year: 2017,
+    title: "An RpoHI-dependent response promotes outgrowth after extended stationary phase in the alphaproteobacterium Rhodobacter sphaeroides",
+    authors: "B. Remes, T. Rische-Grahl, K.M.H. Müller, K.U. Förstner, <b>S.H. Yu</b>, L. Weber, A. Jäger, V. Peuser and G. Klug",
+    journal: "Journal of Bacteriology, 2017, 199 (14), e00249-17",
+    doi: "10.1128/JB.00249-17",
+    if: 3.2, ranking: "Q2",
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/28507242",
+    note: null
+  },
+  {
+    year: 2016,
+    title: "Effect of shear stress on Pseudomonas aeruginosa isolated from the cystic fibrosis lung",
+    authors: "J. Dingemans, P. Monsieurs, <b>S.H. Yu</b>, A. Crabbé, K.U. Förstner, A. Malfroot, P. Cornelis and R. Van Houdt",
+    journal: "mBio, 2016, 7 (4), e00813-16",
+    doi: "10.1128/mBio.00813-16",
+    if: 6.4, ranking: "Q1",
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/27486191",
+    note: null
+  },
+  {
+    year: 2014,
+    title: "Local packing density is the main structural determinant of the rate of protein sequence evolution at site level",
+    authors: "S.W. Yeh, T.T. Huang, J.W. Liu, <b>S.H. Yu</b>, C.H. Shih, J.K. Hwang and J. Echave",
+    journal: "BioMed Research International, 2014",
+    doi: "10.1155/2014/572409",
+    if: null, ranking: null,
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/25121105",
+    note: null
+  },
+  {
+    year: 2013,
+    title: "Site-specific structural constraints on protein sequence evolutionary divergence: local packing density versus solvent exposure",
+    authors: "S.W. Yeh, J.W. Liu, <b>S.H. Yu</b>, C.H. Shih, J.K. Hwang and J. Echave",
+    journal: "Molecular Biology and Evolution, 2013, 31 (1), 135–139",
+    doi: "10.1093/molbev/mst178",
+    if: 14.308, ranking: "Q1",
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/24109601",
+    note: "Top 2 in EVOLUTIONARY BIOLOGY, Top 6 in BIOCHEMISTRY & MOLECULAR BIOLOGY and Top 5 in GENETICS & HEREDITY, 2013"
+  },
+  {
+    year: 2011,
+    title: "On the relationship between catalytic residues and their protein contact number",
+    authors: "S.W. Huang, <b>S.H. Yu</b>, C.H. Shih, H.W. Guan, T.T. Huang and J.K. Hwang",
+    journal: "Current Protein and Peptide Science, 2011, 12 (6), 574–579",
+    doi: "10.2174/138920311798157313",
+    if: 3.830, ranking: "Q2",
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/21787303",
+    note: null
+  },
+  {
+    year: 2007,
+    title: "pKNOT: the protein KNOT web server",
+    authors: "Y.L. Lai, S.C. Yen, <b>S.H. Yu</b> and J.K. Hwang",
+    journal: "Nucleic Acids Research, 2007, 35, W420–W424",
+    doi: "10.1093/nar/gkm304",
+    if: 6.954, ranking: "Q1",
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/17526524",
+    note: null
+  },
+  {
+    year: 2007,
+    title: "A simple way to compute protein dynamics without a mechanical model",
+    authors: "C.H. Shih, S.W. Huang, S.C. Yen, Y.L. Lai, <b>S.H. Yu</b> and J.K. Hwang",
+    journal: "PROTEINS: Structure, Function, and Bioinformatics, 2007, 68 (1), 34–38",
+    doi: "10.1002/prot.21362",
+    if: 3.730, ranking: "Q1",
+    url: "https://www.ncbi.nlm.nih.gov/pubmed/17436324",
+    note: null
+  }
+];
+// ────────────────────────────────────────────────────────────────
+
+async function fetchCitations(doi) {
+  if (!doi) return null;
+  try {
+    const res = await fetch(`https://api.openalex.org/works/https://doi.org/${doi}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.cited_by_count ?? null;
+  } catch { return null; }
+}
+
+function rankingClass(r) {
+  if (!r) return '';
+  const u = r.toUpperCase();
+  if (u === 'Q1') return 'badge-q1';
+  if (u === 'Q2') return 'badge-q2';
+  return 'badge-q3';
+}
+
+function renderJournals(papers, citations) {
+  const byYear = {};
+  papers.forEach((p, i) => {
+    if (!byYear[p.year]) byYear[p.year] = [];
+    byYear[p.year].push({ ...p, citations: citations[i] });
+  });
+
+  const years = Object.keys(byYear).sort((a, b) => b - a);
+  const container = document.getElementById('journal-list');
+  container.innerHTML = '';
+
+  years.forEach(year => {
+    const group = document.createElement('div');
+    group.className = 'year-section';
+    group.innerHTML = `<div class="year-label">${year}</div>`;
+
+    byYear[year].forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'pub-card';
+
+      const citesBadge = p.citations !== null
+        ? `<span class="badge badge-cite">📖 ${p.citations} citations</span>`
+        : (p.doi ? `<span class="badge badge-cite badge-loading">📖 fetching…</span>` : '');
+
+      const altmetricBadge = p.doi
+        ? `<div class="altmetric-wrap">
+             <div class="altmetric-embed"
+               data-badge-type="donut"
+               data-badge-popover="right"
+               data-doi="${p.doi}"
+               data-hide-no-mentions="true">
+             </div>
+           </div>`
+        : '';
+
+      card.innerHTML = `
+        <div class="pub-title">${p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title}</div>
+        <div class="pub-authors">${p.authors}</div>
+        <div class="pub-journal">${p.journal}</div>
+        <div class="pub-metrics">
+          ${p.if      ? `<span class="badge badge-if">IF ${p.if}</span>` : ''}
+          ${p.ranking ? `<span class="badge ${rankingClass(p.ranking)}">${p.ranking}</span>` : ''}
+          ${citesBadge}
+          ${p.note    ? `<span class="badge badge-note">★ ${p.note}</span>` : ''}
+          ${altmetricBadge}
+        </div>`;
+      group.appendChild(card);
+    });
+    container.appendChild(group);
+  });
+
+  if (window._altmetric_embed_init) window._altmetric_embed_init();
+
+  document.getElementById('update-note').textContent =
+    `Citation counts fetched from OpenAlex on ${new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })}`;
+}
+
+async function init() {
+  renderJournals(PAPERS, PAPERS.map(() => null));
+  const citations = await Promise.all(PAPERS.map(p => fetchCitations(p.doi)));
+  renderJournals(PAPERS, citations);
+}
+
+init();
+</script>
 
 	</body>
 </html>
