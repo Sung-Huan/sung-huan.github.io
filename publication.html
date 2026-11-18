@@ -10,7 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-		<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -51,7 +50,7 @@
 			.badge-cite { background: #f1efe8; color: #444441; }
 			.badge-note { background: #faeeda; color: #633806; }
 			.badge-loading { opacity: 0.45; }
-			.altmetric-wrap {
+			.dimensions-wrap {
 				display: flex;
 				align-items: center;
 				gap: 0.3rem;
@@ -173,7 +172,6 @@
 		<script src="assets/js/main.js"></script>
 
 <script>
-// ── 論文清單：IF 和 ranking 請每年手動更新 ─────────────────────────
 const PAPERS = [
   {
     year: 2026,
@@ -396,7 +394,6 @@ const PAPERS = [
     note: null
   }
 ];
-// ────────────────────────────────────────────────────────────────
 
 async function fetchCitations(doi) {
   if (!doi) return null;
@@ -440,19 +437,8 @@ function renderJournals(papers, citations) {
         ? `<span class="badge badge-cite">📖 ${p.citations} citations</span>`
         : (p.doi ? `<span class="badge badge-cite badge-loading">📖 fetching…</span>` : '');
 
-      const altmetricBadge = p.doi
-        ? `<div class="altmetric-wrap">
-             <div class="altmetric-embed"
-               data-badge-type="donut"
-               data-badge-popover="right"
-               data-doi="${p.doi}"
-               data-hide-no-mentions="true">
-             </div>
-           </div>`
-        : '';
-
-	  const dimensionsBadge = p.doi
-        ? `<div class="altmetric-wrap">
+      const dimensionsBadge = p.doi
+        ? `<div class="dimensions-wrap">
              <span class="__dimensions_badge_embed__"
                data-doi="${p.doi}"
                data-style="small_rectangle"
@@ -470,14 +456,12 @@ function renderJournals(papers, citations) {
           ${p.ranking ? `<span class="badge ${rankingClass(p.ranking)}">${p.ranking}</span>` : ''}
           ${citesBadge}
           ${p.note    ? `<span class="badge badge-note">★ ${p.note}</span>` : ''}
-          ${altmetricBadge}
+          ${dimensionsBadge}
         </div>`;
       group.appendChild(card);
     });
     container.appendChild(group);
   });
-
-  if (window._altmetric_embed_init) window._altmetric_embed_init();
 
   document.getElementById('update-note').textContent =
     `Citation counts fetched from OpenAlex on ${new Date().toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' })}`;
